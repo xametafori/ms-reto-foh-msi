@@ -3,7 +3,7 @@ server:
 
 spring:
   
-  cloud:
+ # cloud:
         
     #bus:
     #  enabled: true
