@@ -12,10 +12,10 @@ spring:
     
   cloud:
 
-    #   config:
-    #    enabled: true
-    #   username: ${CONFIG_SERVER_USERNAME:admin}
-    #   password: ${CONFIG_SERVER_PASSWORD:admin}
+       config:
+        enabled: true
+       username: ${CONFIG_SERVER_USERNAME:admin}
+       password: ${CONFIG_SERVER_PASSWORD:admin}
       
     vault:
       enabled: true
