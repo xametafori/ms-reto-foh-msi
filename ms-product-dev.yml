@@ -2,25 +2,23 @@ server:
   port: ${PORT:0}
 
 spring:
-      
+    
   datasource:
     driver-class-name: org.postgresql.Driver
   
-  h2:
-    console:
-      enabled: false
-      path: /h2-console
+#  h2:
+#    console:
+#      enabled: false
+#      path: /h2-console
   
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
-    properties:
-      hibernate:
-        '[show_sql]': true
-        '[use_sql_comments]': false
-        '[format_sql]': false
-        '[event.merge.entity_copy_observer]': allow
-    show-sql: true
+ 
+   
+  
+  boot:
+    admin:
+      client:
+        enabled: true
+
 
 management:
   endpoints:
