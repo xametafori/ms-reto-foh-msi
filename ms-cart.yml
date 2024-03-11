@@ -9,6 +9,9 @@ spring:
       enabled: true
       destination: springCloudBus
     
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
   
   jpa:
     defer-datasource-initialization: true
@@ -18,13 +21,13 @@ spring:
       hibernate:
         '[show_sql]': true
         '[use_sql_comments]': false
-        '[format_sql]': true
+        '[format_sql]': false
         '[event.merge.entity_copy_observer]': allow
     show-sql: true
   sql:
     init:
       mode: always
-      platform: h2
+      platform: sql
   
   boot:
     admin:
@@ -76,4 +79,7 @@ resilience4j:
         base-config: defecto
         
 configuration:
-    texto: Configurando entorno Defecto...
+    texto: Configurando entorno Desarrollo ...
+    autor:
+        nombre: John Doe
+        email: johndoe@email.com
