@@ -6,10 +6,10 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
   
-  h2:
-    console:
-      enabled: false
-      path: /h2-console
+#  h2:
+#    console:
+#      enabled: false
+#      path: /h2-console
   
   jpa:
     hibernate:
