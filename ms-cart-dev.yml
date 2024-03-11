@@ -5,41 +5,37 @@ spring:
   
   cloud:
   
-    bus:
-      enabled: true
-      destination: springCloudBus
+    datasource:
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  
     
-  datasource:
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-
-  
-  jpa:
-    defer-datasource-initialization: true
-    hibernate:
-      ddl-auto: create
-    properties:
+    jpa:
+      defer-datasource-initialization: true
       hibernate:
-        '[show_sql]': true
-        '[use_sql_comments]': false
-        '[format_sql]': false
-        '[event.merge.entity_copy_observer]': allow
-    show-sql: true
-  sql:
-    init:
-      mode: always
-      platform: sql
-  
-  boot:
-    admin:
-      client:
-        enabled: true
-  
-  zipkin:
-    enabled: true
-    sender:
-      type: kafka
-    kafka:
-      topic: zipkin
+        ddl-auto: create
+      properties:
+        hibernate:
+          '[show_sql]': true
+          '[use_sql_comments]': false
+          '[format_sql]': false
+          '[event.merge.entity_copy_observer]': allow
+      show-sql: true
+    sql:
+      init:
+        mode: always
+        platform: sql
+    
+    boot:
+      admin:
+        client:
+          enabled: true
+    
+    zipkin:
+      enabled: true
+      sender:
+        type: kafka
+      kafka:
+        topic: zipkin
 
 management:
   endpoints:
