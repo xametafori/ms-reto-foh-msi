@@ -11,14 +11,7 @@ spring:
 #      enabled: false
 #      path: /h2-console
   
-  jpa:
-    properties:
-      hibernate:
-        '[show_sql]': true
-        '[use_sql_comments]': false
-        '[format_sql]': false
-        '[event.merge.entity_copy_observer]': allow
-    show-sql: true  
+ 
    
   
   boot:
