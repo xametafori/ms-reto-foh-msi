@@ -24,6 +24,17 @@ spring:
       client:
         enabled: true
 
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        '[show_sql]': true
+        '[use_sql_comments]': false
+        '[format_sql]': false
+        '[event.merge.entity_copy_observer]': allow
+    show-sql: true
+
 
 management:
   endpoints:
