@@ -13,14 +13,8 @@ spring:
   
   jpa:
     hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        '[show_sql]': true
-        '[use_sql_comments]': false
-        '[format_sql]': false
-        '[event.merge.entity_copy_observer]': allow
-    show-sql: true
+      ddl-auto: create-drop
+   
   
   boot:
     admin:
